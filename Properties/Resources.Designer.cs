@@ -70,7 +70,7 @@ namespace FO3ProfileManager.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to fose_loader.exe.
+        ///   Looks up a localized string similar to FalloutLauncher.exe.
         /// </summary>
         internal static string DefaultExe {
             get {
