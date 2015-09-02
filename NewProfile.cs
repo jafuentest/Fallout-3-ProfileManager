@@ -14,7 +14,7 @@ namespace FO3ProfileManager
 		private void btn_createProfile_Click(object sender, EventArgs e)
 		{
 			string myDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-			string savesPath = Properties.Resources.Fallout3Path + Properties.Resources.RootSavesPath;
+			string savesPath = Properties.Resources.RootSavesFullPath;
 			string profilePath = savesPath + txt_profileName.Text;
 
 			if (Directory.Exists(profilePath))

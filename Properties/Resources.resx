@@ -123,7 +123,7 @@
   <data name="ProfileExists" xml:space="preserve">
     <value>Couldn't create profile, there's already a folder with that name in your saves directory.</value>
   </data>
-  <data name="RootSavesPath" xml:space="preserve">
+  <data name="RootSavesSubPath" xml:space="preserve">
     <value>Saves\</value>
   </data>
   <data name="RegistryPath" xml:space="preserve">
@@ -153,5 +153,8 @@
   </data>
   <data name="RegistryError" xml:space="preserve">
     <value>Couldn't read from registry, please set the path to the game exe.</value>
+  </data>
+  <data name="RootSavesFullPath" xml:space="preserve">
+    <value>My Games\Fallout3\Saves\</value>
   </data>
 </root>

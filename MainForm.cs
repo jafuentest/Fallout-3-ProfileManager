@@ -24,7 +24,7 @@ namespace FO3ProfileManager
 
 			for (int i = 0; i < fileLines.Length; i++)
 				if (fileLines[i].StartsWith(Properties.Resources.ConfigKey))
-					fileLines[i] = Properties.Resources.ConfigKey + Properties.Resources.RootSavesPath + profileName;
+					fileLines[i] = Properties.Resources.ConfigKey + Properties.Resources.RootSavesSubPath + profileName;
 
 			File.WriteAllLines(filePath, fileLines);
 		}
@@ -42,7 +42,7 @@ namespace FO3ProfileManager
 
 			// Load combo box
 			string myDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-			DirectoryInfo dir = new DirectoryInfo(myDocumentsPath + Properties.Resources.Fallout3Path + Properties.Resources.RootSavesPath);
+			DirectoryInfo dir = new DirectoryInfo(myDocumentsPath + @"\" + Properties.Resources.RootSavesFullPath);
 			foreach (DirectoryInfo subDir in dir.GetDirectories())
 				cbo_profiles.Items.Add(subDir.Name);
 			cbo_profiles.SelectedIndex = 0;

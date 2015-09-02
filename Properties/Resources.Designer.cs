@@ -142,11 +142,20 @@ namespace FO3ProfileManager.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to My Games\Fallout3\Saves\.
+        /// </summary>
+        internal static string RootSavesFullPath {
+            get {
+                return ResourceManager.GetString("RootSavesFullPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Saves\.
         /// </summary>
-        internal static string RootSavesPath {
+        internal static string RootSavesSubPath {
             get {
-                return ResourceManager.GetString("RootSavesPath", resourceCulture);
+                return ResourceManager.GetString("RootSavesSubPath", resourceCulture);
             }
         }
         
