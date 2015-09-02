@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
 using System.IO;
@@ -29,15 +30,43 @@ namespace FO3ProfileManager
 			File.WriteAllLines(filePath, fileLines);
 		}
 
+		private void SaveSetting(string key, string value)
+		{
+			Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+			config.AppSettings.Settings.Remove(key);
+			config.AppSettings.Settings.Add(new KeyValueConfigurationElement(key, value));
+			config.Save(ConfigurationSaveMode.Modified);
+			ConfigurationManager.RefreshSection("appSettings");
+		}
+
+		private void SaveSettings(Dictionary<string,string> settings)
+		{
+			Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+			foreach (KeyValuePair<string, string> setting in settings)
+			{
+				config.AppSettings.Settings.Remove(setting.Key);
+				config.AppSettings.Settings.Add(new KeyValueConfigurationElement(setting.Key, setting.Value));
+			}
+			config.Save(ConfigurationSaveMode.Modified);
+			ConfigurationManager.RefreshSection("appSettings");
+		}
+
 		#region Events
 		private void MainLoad(object sender, EventArgs e)
 		{
 			// Check game exe path
 			if (String.IsNullOrEmpty(ConfigurationManager.AppSettings["GameExePath"]))
 			{
+				Dictionary<string, string> settings = new Dictionary<string,string>();
+				MessageBox.Show("No exe path in settings");
 				using (RegistryKey key = Registry.LocalMachine.OpenSubKey(Properties.Resources.RegistryPath))
-					ConfigurationManager.AppSettings["GameExePath"] = (string)key.GetValue(Properties.Resources.RegistryKey);
-				ConfigurationManager.AppSettings["GameExeFileName"] = Properties.Resources.DefaultExe;
+				{
+					string path = (string)key.GetValue(Properties.Resources.RegistryKey);
+					settings.Add("GameExePath", path);
+				}
+				string fileName = Properties.Resources.DefaultExe;
+				settings.Add("GameExeFileName", fileName);
+				SaveSettings(settings);
 			}
 
 			// Load combo box
@@ -86,8 +115,10 @@ namespace FO3ProfileManager
 
 			if (result == DialogResult.OK)
 			{
-				ConfigurationManager.AppSettings["GameExePath"] = Path.GetDirectoryName(openFileDialog.FileName);
-				ConfigurationManager.AppSettings["GameExeFileName"] = Path.GetFileName(openFileDialog.FileName);
+				Dictionary<string, string> settings = new Dictionary<string, string>();
+				settings.Add("GameExePath", Path.GetDirectoryName(openFileDialog.FileName));
+				settings.Add("GameExeFileName", Path.GetFileName(openFileDialog.FileName));
+				SaveSettings(settings);
 			}
 		}
 		#endregion
