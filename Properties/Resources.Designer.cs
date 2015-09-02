@@ -79,7 +79,7 @@ namespace FO3ProfileManager.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to \My Games\Fallout3\Fallout.ini.
+        ///   Looks up a localized string similar to My Games\Fallout3\Fallout.ini.
         /// </summary>
         internal static string Fallout3DotIniPath {
             get {
@@ -88,7 +88,7 @@ namespace FO3ProfileManager.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to \My Games\Fallout3\.
+        ///   Looks up a localized string similar to My Games\Fallout3\.
         /// </summary>
         internal static string Fallout3Path {
             get {

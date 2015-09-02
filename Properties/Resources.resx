@@ -143,10 +143,10 @@
     <value>Please select a profile first. If there is none, then you may click the Action menu and create a new one or generate it/them from your saved games</value>
   </data>
   <data name="Fallout3Path" xml:space="preserve">
-    <value>\My Games\Fallout3\</value>
+    <value>My Games\Fallout3\</value>
   </data>
   <data name="Fallout3DotIniPath" xml:space="preserve">
-    <value>\My Games\Fallout3\Fallout.ini</value>
+    <value>My Games\Fallout3\Fallout.ini</value>
   </data>
   <data name="SettingsFileName" xml:space="preserve">
     <value>FO3ProfileManager.xml</value>

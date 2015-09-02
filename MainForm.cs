@@ -19,7 +19,7 @@ namespace FO3ProfileManager
 		private void EditIniFile(string profileName)
 		{
 			string myDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-			string filePath = myDocumentsPath + Properties.Resources.Fallout3DotIniPath;
+			string filePath = myDocumentsPath + @"\" + Properties.Resources.Fallout3DotIniPath;
 			fileLines = File.ReadAllLines(filePath);
 
 			for (int i = 0; i < fileLines.Length; i++)
