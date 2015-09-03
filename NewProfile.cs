@@ -18,7 +18,9 @@ namespace FO3ProfileManager
 			string profilePath = savesPath + txt_profileName.Text;
 
 			if (Directory.Exists(profilePath))
+			{
 				MessageBox.Show(Properties.Resources.ProfileExists);
+			}
 			else
 			{
 				Directory.CreateDirectory(profilePath);
