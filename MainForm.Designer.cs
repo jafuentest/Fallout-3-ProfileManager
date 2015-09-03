@@ -85,15 +85,15 @@
 			// newProfileToolStripMenuItem
 			// 
 			this.newProfileToolStripMenuItem.Name = "newProfileToolStripMenuItem";
-			this.newProfileToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+			this.newProfileToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
 			this.newProfileToolStripMenuItem.Text = "New Profile";
 			this.newProfileToolStripMenuItem.Click += new System.EventHandler(this.newProfileToolStripMenuItem_Click);
 			// 
 			// toolStripMenuItem1
 			// 
 			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(162, 22);
-			this.toolStripMenuItem1.Text = "Scan SaveGames";
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
+			this.toolStripMenuItem1.Text = "Scan Saved Games";
 			this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
 			// 
 			// smi_settings
@@ -107,7 +107,7 @@
 			// changeToolStripMenuItem
 			// 
 			this.changeToolStripMenuItem.Name = "changeToolStripMenuItem";
-			this.changeToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+			this.changeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.changeToolStripMenuItem.Text = "Set Game exe";
 			this.changeToolStripMenuItem.Click += new System.EventHandler(this.changeToolStripMenuItem_Click);
 			// 
