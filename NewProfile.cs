@@ -30,6 +30,5 @@ namespace FO3ProfileManager
 		{
 			this.Dispose();
 		}
-
 	}
 }
