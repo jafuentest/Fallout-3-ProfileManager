@@ -38,16 +38,18 @@
 			this.smi_settings = new System.Windows.Forms.ToolStripMenuItem();
 			this.changeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.pic_thumbsUp = new System.Windows.Forms.PictureBox();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.menuStrip.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pic_thumbsUp)).BeginInit();
+			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// btn_launch
 			// 
 			this.btn_launch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_launch.Location = new System.Drawing.Point(12, 58);
+			this.btn_launch.Location = new System.Drawing.Point(19, 78);
 			this.btn_launch.Name = "btn_launch";
-			this.btn_launch.Size = new System.Drawing.Size(260, 45);
+			this.btn_launch.Size = new System.Drawing.Size(227, 45);
 			this.btn_launch.TabIndex = 1;
 			this.btn_launch.Text = "Play";
 			this.btn_launch.UseVisualStyleBackColor = true;
@@ -57,9 +59,9 @@
 			// 
 			this.cbo_profiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cbo_profiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.cbo_profiles.Location = new System.Drawing.Point(12, 27);
+			this.cbo_profiles.Location = new System.Drawing.Point(6, 19);
 			this.cbo_profiles.Name = "cbo_profiles";
-			this.cbo_profiles.Size = new System.Drawing.Size(260, 25);
+			this.cbo_profiles.Size = new System.Drawing.Size(227, 25);
 			this.cbo_profiles.TabIndex = 2;
 			// 
 			// menuStrip
@@ -69,7 +71,7 @@
             this.smi_settings});
 			this.menuStrip.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip.Name = "menuStrip";
-			this.menuStrip.Size = new System.Drawing.Size(284, 24);
+			this.menuStrip.Size = new System.Drawing.Size(267, 24);
 			this.menuStrip.TabIndex = 3;
 			this.menuStrip.Text = "menuStrip1";
 			// 
@@ -115,22 +117,33 @@
 			// 
 			this.pic_thumbsUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.pic_thumbsUp.Image = global::FO3ProfileManager.Properties.Resources.ThumbsUp;
-			this.pic_thumbsUp.Location = new System.Drawing.Point(12, 115);
+			this.pic_thumbsUp.Location = new System.Drawing.Point(12, 138);
 			this.pic_thumbsUp.Name = "pic_thumbsUp";
-			this.pic_thumbsUp.Size = new System.Drawing.Size(260, 268);
+			this.pic_thumbsUp.Size = new System.Drawing.Size(240, 245);
 			this.pic_thumbsUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pic_thumbsUp.TabIndex = 4;
 			this.pic_thumbsUp.TabStop = false;
+			// 
+			// groupBox1
+			// 
+			this.groupBox1.Controls.Add(this.cbo_profiles);
+			this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.groupBox1.Location = new System.Drawing.Point(13, 28);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(239, 104);
+			this.groupBox1.TabIndex = 6;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "Select Profile";
 			// 
 			// MainForm
 			// 
 			this.AcceptButton = this.btn_launch;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(284, 395);
-			this.Controls.Add(this.pic_thumbsUp);
-			this.Controls.Add(this.cbo_profiles);
+			this.ClientSize = new System.Drawing.Size(267, 395);
 			this.Controls.Add(this.btn_launch);
+			this.Controls.Add(this.groupBox1);
+			this.Controls.Add(this.pic_thumbsUp);
 			this.Controls.Add(this.menuStrip);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MainMenuStrip = this.menuStrip;
@@ -141,6 +154,7 @@
 			this.menuStrip.ResumeLayout(false);
 			this.menuStrip.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pic_thumbsUp)).EndInit();
+			this.groupBox1.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -157,6 +171,7 @@
 		private System.Windows.Forms.ToolStripMenuItem newProfileToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
 		private System.Windows.Forms.PictureBox pic_thumbsUp;
+		private System.Windows.Forms.GroupBox groupBox1;
 	}
 }
 
