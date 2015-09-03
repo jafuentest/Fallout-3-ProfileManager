@@ -122,8 +122,9 @@
 			this.pic_thumbsUp.TabIndex = 4;
 			this.pic_thumbsUp.TabStop = false;
 			// 
-			// Main
+			// MainForm
 			// 
+			this.AcceptButton = this.btn_launch;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(284, 395);
@@ -133,7 +134,7 @@
 			this.Controls.Add(this.menuStrip);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MainMenuStrip = this.menuStrip;
-			this.Name = "Main";
+			this.Name = "MainForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Fallout 3 Profile Manager";
 			this.Load += new System.EventHandler(this.MainLoad);
